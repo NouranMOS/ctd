@@ -16,11 +16,13 @@ def fcomp():
     regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
     PASHASH2 = hashlib.md5(pas.encode("utf-8")).hexdigest()
     if user == 'guest' and PASHASH2 == PASHASH1:
-       Label(R, text=" Enter Successfully ",fg='black',font=('helvetica-bold')).place(x=170,y= 170)
+       Label(R, text=" Login Successfully ",fg='black',font=('helvetica-bold')).place(x=170,y= 170)
     elif regex.search(pas)!= None or regex.search(user)!= None:
          messagebox.showinfo("Message", " Don't nter special char ")
-    elif user=="" or pas=="":
-         messagebox.showwarning("Message"," You didn't enter ")
+    elif user=="":
+         messagebox.showwarning("Message"," You didn't enter username")
+    elif pas=="":
+        messagebox.showwarning("Message"," You didn't enter password")
     else : 
         messagebox.showerror("Message", " Wrong password or username ")
 Label(R, text='Username',font=("helvetica", 11),bg='#856ff8').grid(row=0)
