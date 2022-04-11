@@ -11,5 +11,3 @@ elif(x=='2'):
     print('temp in celsius is %0.1f' %c)
 else:
     print("ERROR")
-#reem 
-#nouran
